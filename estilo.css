@@ -1,3 +1,4 @@
+/* Estilo de VS23012 */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap');
 
 :root {
@@ -17,17 +18,21 @@
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
+    background-color: #0f172a;
+    color: #e2e8f0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 48px 20px;
-    background: var(--bg-deep);
-    font-family: 'Inter', sans-serif;
-    overflow: hidden;
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    padding: 60px 20px;
     position: relative;
+    gap: 40px;
+
 }
+
 
 .tarjeta-vs23012__fondo {
     position: fixed;
@@ -95,7 +100,7 @@ body {
 
 .tarjeta-vs23012 {
     width: 100%;
-    max-width: 440px;
+    max-width: 650px;
     padding: 36px 32px 32px;
     background: var(--vidrio);
     border: 1px solid var(--vidrio-borde);
@@ -216,6 +221,8 @@ body {
     }
 }
 
+
+/* Estilo de VP23002 */
 * {
     margin: 0;
     padding: 0;
@@ -328,5 +335,103 @@ body {
 @media (min-width: 500px) {
     .grid-detalles {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* estilo de GR23047 */
+body {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#GR23047 {
+    background-color: #0a0e0a;
+    color: #00e08c;
+    border-radius: 10px;
+    font-family: "Fira Code", "Cascadia Code", Consolas, monospace;
+    line-height: 1.6;
+    width: 650px;
+    max-width: 90vw;
+    box-shadow: 0 0 25px rgba(0, 224, 140, 0.35), 0 0 60px rgba(0, 224, 140, 0.12);
+    border: 1px solid rgba(0, 224, 140, 0.4);
+    overflow: hidden;
+}
+
+.barra-terminal {
+    background-color: #161b16;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(0, 224, 140, 0.25);
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.rojo {
+    background-color: #ff5f56;
+}
+
+.amarillo {
+    background-color: #ffbd2e;
+}
+
+.verde {
+    background-color: #27c93f;
+}
+
+.ruta {
+    margin-left: 10px;
+    color: #6b7d6f;
+    font-size: 0.85em;
+}
+
+.contenido {
+    padding: 20px 25px 25px;
+}
+
+.prompt {
+    margin: 18px 0 6px;
+    font-size: 0.95em;
+}
+
+.usuario {
+    color: #00e08c;
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(0, 224, 140, 0.6);
+}
+
+.simbolo {
+    color: #6b7d6f;
+    margin-right: 6px;
+}
+
+h2 {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 224, 140, 0.5);
+    margin: 4px 0;
+}
+
+.carnet {
+    color: #6b7d6f;
+    margin: 0 0 10px;
+}
+
+.cursor {
+    animation: parpadeo 1s steps(1) infinite;
+}
+
+@keyframes parpadeo {
+    50% {
+        opacity: 0;
     }
 }
