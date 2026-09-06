@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+    --bg-deep: #0b0f19;
+    --violeta: #7c5cff;
+    --cian: #33d6c0;
+    --coral: #ff6b6b;
+    --texto: #f5f5fa;
+    --texto-suave: #b8bcc8;
+    --vidrio: rgba(255, 255, 255, 0.08);
+    --vidrio-borde: rgba(255, 255, 255, 0.18);
+    --vidrio-panel: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    background: var(--bg-deep);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.tarjeta-vs23012__fondo {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.tarjeta-vs23012__mancha {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.45;
+}
+
+.tarjeta-vs23012__mancha--violeta {
+    width: 340px;
+    height: 340px;
+    background: var(--violeta);
+    top: 8%;
+    left: 12%;
+    animation: flotar 12s ease-in-out infinite;
+}
+
+.tarjeta-vs23012__mancha--cian {
+    width: 300px;
+    height: 300px;
+    background: var(--cian);
+    bottom: 10%;
+    right: 14%;
+    animation: flotar 14s ease-in-out infinite reverse;
+}
+
+.tarjeta-vs23012__mancha--coral {
+    width: 220px;
+    height: 220px;
+    background: var(--coral);
+    bottom: 30%;
+    left: 30%;
+    animation: flotar 16s ease-in-out infinite;
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -20px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta-vs23012__mancha {
+        animation: none;
+    }
+}
+
+#carnet {
+    position: relative;
+    z-index: 1;
+}
+
+.tarjeta-vs23012 {
+    width: 100%;
+    max-width: 440px;
+    padding: 36px 32px 32px;
+    background: var(--vidrio);
+    border: 1px solid var(--vidrio-borde);
+    border-radius: 22px;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.tarjeta-vs23012__cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--vidrio-borde);
+}
+
+.tarjeta-vs23012__avatar {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--texto);
+    background: linear-gradient(135deg, var(--violeta), var(--cian));
+    border: 1px solid var(--vidrio-borde);
+    box-shadow: 0 0 0 6px rgba(124, 92, 255, 0.12);
+}
+
+.tarjeta-vs23012__nombre {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--texto);
+}
+
+.tarjeta-vs23012__carnet {
+    margin: 0;
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+.tarjeta-vs23012__carrera {
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: var(--cian);
+    font-weight: 500;
+}
+
+.tarjeta-vs23012__seccion {
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    background: var(--vidrio-panel);
+    border: 1px solid var(--vidrio-borde);
+    border-left: 3px solid var(--cian);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.tarjeta-vs23012__seccion:last-child {
+    margin-bottom: 0;
+}
+
+.tarjeta-vs23012__seccion:nth-of-type(2) {
+    border-left-color: var(--cian);
+}
+
+.tarjeta-vs23012__titulo {
+    margin: 0 0 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cian);
+}
+
+.tarjeta-vs23012__seccion:nth-of-type(2) .tarjeta-vs23012__titulo {
+    color: var(--cian);
+}
+
+.tarjeta-vs23012__bio {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--texto-suave);
+}
+
+.tarjeta-vs23012__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tarjeta-vs23012__tag {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--texto);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--vidrio-borde);
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+@media (max-width: 480px) {
+    .tarjeta-vs23012 {
+        padding: 28px 22px;
+    }
+}
