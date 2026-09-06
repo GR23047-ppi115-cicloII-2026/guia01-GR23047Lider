@@ -1,8 +1,85 @@
+body {
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
 #GR23047 {
-  background-color: #000000;
-  color: rgb(0, 161, 80);
-  padding: 15px;
-  border-radius: 8px;
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
+  background-color: #0a0e0a;
+  color: #00e08c;
+  border-radius: 10px;
+  font-family: "Fira Code", "Cascadia Code", Consolas, monospace;
+  line-height: 1.6;
+  width: 620px;
+  max-width: 90vw;
+  box-shadow: 0 0 25px rgba(0, 224, 140, 0.35), 0 0 60px rgba(0, 224, 140, 0.12);
+  border: 1px solid rgba(0, 224, 140, 0.4);
+  overflow: hidden;
+}
+
+.barra-terminal {
+  background-color: #161b16;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(0, 224, 140, 0.25);
+}
+
+.punto {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.rojo { background-color: #ff5f56; }
+.amarillo { background-color: #ffbd2e; }
+.verde { background-color: #27c93f; }
+
+.ruta {
+  margin-left: 10px;
+  color: #6b7d6f;
+  font-size: 0.85em;
+}
+
+.contenido {
+  padding: 20px 25px 25px;
+}
+
+.prompt {
+  margin: 18px 0 6px;
+  font-size: 0.95em;
+}
+
+.usuario {
+  color: #00e08c;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(0, 224, 140, 0.6);
+}
+
+.simbolo {
+  color: #6b7d6f;
+  margin-right: 6px;
+}
+
+h2 {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 224, 140, 0.5);
+  margin: 4px 0;
+}
+
+.carnet {
+  color: #6b7d6f;
+  margin: 0 0 10px;
+}
+
+.cursor {
+  animation: parpadeo 1s steps(1) infinite;
+}
+
+@keyframes parpadeo {
+  50% { opacity: 0; }
 }
